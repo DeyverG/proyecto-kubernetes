@@ -1,0 +1,37 @@
+apiVersion: apps/v1 
+
+kind: Deployment 
+
+metadata: 
+
+  name: proyecto-kubernetes 
+
+spec: 
+
+  replicas: 3 
+
+  selector: 
+
+    matchLabels: 
+
+      app: proyecto-kubernetes
+
+  template: 
+
+    metadata: 
+
+      labels: 
+
+        app: proyecto-kubernetes
+
+    spec: 
+
+      containers: 
+
+      - name: proyecto-kubernetes 
+
+        image: deyverg/proyecto-kubernetes:latest 
+
+        ports: 
+
+        - containerPort: 3000
